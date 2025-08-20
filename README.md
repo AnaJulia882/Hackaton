@@ -37,6 +37,7 @@ O projeto foi desenvolvido para o Hackathon “Dados pelo Clima” (ODS 13 – A
 1️⃣ Clonar o Repositório
 
 git clone https://github.com/AnaJulia882/hackathon.git
+
 cd hackathon
 
 2️⃣ Configurar o Banco de Dados
