@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$user = "root";   // coloque seu usuário do MySQL
-$pass = "";       // coloque sua senha do MySQL
+$user = "root";   
+$pass = "";       
 $dbname = "ecoquiz";
 
 try {
@@ -10,4 +10,5 @@ try {
 } catch (PDOException $e) {
     die("Erro na conexão: " . $e->getMessage());
 }
+
 ?>
