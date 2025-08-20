@@ -1,0 +1,116 @@
+/* ---------- Reset básico ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------- Fundo e container ---------- */
+body {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* ---------- Títulos ---------- */
+h1 {
+    text-align: center;
+    color: #2ecc71;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #27ae60;
+}
+
+/* ---------- Inputs e botões ---------- */
+input[type="text"], input[type="radio"] {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #2ecc71;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #27ae60;
+    box-shadow: 0px 0px 8px rgba(46, 204, 113, 0.6);
+}
+
+button {
+    display: block;
+    width: 100%;
+    background: #2ecc71;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #27ae60;
+}
+
+/* ---------- Perguntas ---------- */
+.quiz-question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    border-left: 5px solid #2ecc71;
+}
+
+label {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+label:hover {
+    background: rgba(46, 204, 113, 0.1);
+}
+
+/* ---------- Ranking ---------- */
+ol {
+    margin-top: 15px;
+    padding-left: 25px;
+}
+
+ol li {
+    padding: 6px 0;
+    font-weight: 500;
+}
+
+/* ---------- Animação ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
