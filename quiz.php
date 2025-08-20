@@ -4,13 +4,11 @@ include "db.php";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
 
-    // Salvar usuário
     $stmt = $pdo->prepare("INSERT INTO usuarios (nome) VALUES (:nome)");
     $stmt->execute([':nome' => $nome]);
     $usuario_id = $pdo->lastInsertId();
 }
 
-// Buscar 5 perguntas da API
 $apiUrl = "https://opentdb.com/api.php?amount=5&category=17&type=multiple"; 
 $json = file_get_contents($apiUrl);
 $dados = json_decode($json, true);
@@ -53,4 +51,5 @@ $perguntas = $dados['results'];
         </form>
     </div>
 </body>
+
 </html>
