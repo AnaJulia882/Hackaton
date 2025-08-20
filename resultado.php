@@ -12,11 +12,9 @@ foreach ($respostas as $i => $resp) {
     }
 }
 
-// Salvar pontuação
 $stmt = $pdo->prepare("INSERT INTO pontuacoes (usuario_id, pontos) VALUES (:usuario_id, :pontos)");
 $stmt->execute([':usuario_id' => $usuario_id, ':pontos' => $pontos]);
 
-// Ranking
 $ranking = $pdo->query("SELECT u.nome, p.pontos, p.data 
                         FROM pontuacoes p 
                         JOIN usuarios u ON p.usuario_id = u.id 
@@ -48,4 +46,5 @@ $ranking = $pdo->query("SELECT u.nome, p.pontos, p.data
         </div>
     </div>
 </body>
+
 </html>
